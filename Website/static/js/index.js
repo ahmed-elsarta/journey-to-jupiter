@@ -1,3 +1,13 @@
+// for loader ---
+var loader = document.getElementById("preloader");
+
+window.addEventListener("load", function(){
+    loader.style.opacity = 0;
+    loader.style.zIndex = 1;
+});
+
+// navbar animation
+
 var home = document.getElementById("home");
 var info = document.getElementById("info");
 var contact = document.getElementById("contact");
