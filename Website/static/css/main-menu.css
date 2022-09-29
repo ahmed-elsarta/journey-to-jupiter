@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url(../img/preloader.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 50px;
+    /* overflow: hidden; */
+}
+
+/* Choose Section */
+
+.choose-section{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 50%;
+    height: 120vh;
+    border-radius: 40px;
+}
+
+.text h1 {
+    margin-bottom: 10px;
+    color: rgb(247, 11, 133);
+}
+
+.text h3{
+    margin-bottom: 20px;
+}
+
+/* Cards */
+
+.card {
+    position: relative;
+    width: 600px;
+    height: 150px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    margin-bottom: 20px;
+}
+
+
+.card h3 {
+    position: absolute;
+    font-size: 26px;
+}
+
+.card .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card .circle::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1d1135;
+    clip-path: circle(60px at center);
+    transition: 0.5s;
+}
+
+.card:hover .circle:before{
+    background: #edf0f1;
+    clip-path: circle(400px at center);
+}
+
+.card-image img{
+    position: absolute;
+    top: 40%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    height: 120px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.card:hover .card-image img {
+    left: 90%;
+    height: 220px;
+}
+
+
+/* card content */
+
+.card .content{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card:hover .content{
+    left:-120px;
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.card .content h2{
+    color: rgb(247, 11, 133);
+    text-transform: uppercase;
+    font-size: 1.5em;
+    line-height: 1em;
+    margin-bottom: 10px;
+}
+
+
+/* JS part */
+
+.card .circle-opened::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #edf0f1;
+    clip-path: circle(400px at center);
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.image-opened img {
+    position: absolute;
+    top:40%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    height: 120px;
+    transition: 0.5s;
+}
+
+
+.content-opened{
+    position: relative;
+    width: 50%;
+    top: -45px;
+    left: -120px;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;
+    opacity: 1;
+    visibility: visible;
+}
+
+.content-opened h2{
+    color: rgb(247, 11, 133);
+    text-transform: uppercase;
+    font-size: 1.5em;
+    line-height: 1em;
+    margin-bottom: 10px;
+}
+
+
+
+/* For Radio-Buttons (Selections) */
+
+.attributes {
+    position: absolute;
+    left: 73%;
+    top: 20%;
+    display: flex;
+    flex: wrap;
+    justify-content: center;
+}
+
+.input-container {
+    position: relative;
+    width: 30px;
+    margin: 33px;
+}
+
+.input-container input{
+    position: absolute;
+    width: 200%;
+    height: 50%;
+    margin-left: -30px;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+
+}
+
+.radio-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.radio-title img{
+    height: 60px;
+    width: 60px;
+    transition: all 0.5s linear;
+}
+
+.radio-title label {
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    margin-top: 0;
+}
+
+
+.radio-image {
+    transition: all 0.5s linear;
+}
+
+
+
+/* JS Part */
+
+.active {
+    border-style:hidden;
+    padding: 2px;
+    border: 4px solid rgb(247, 11, 133);
+    border-radius: 90px;
+    transform: translateY(-30px);
+    margin-bottom: -20px;
+    transition: all 0.5s ease;
+}
+
+.active img {
+    width: 80px;
+    height: 80px;
+}

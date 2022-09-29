@@ -4,86 +4,214 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+            <!-- css and fonts and icons -->
+    <link rel="stylesheet" href="../static/css/main-menu.css">
+
     <title>Main Menu</title>
 </head>
+
+
+
+
 <body>
-    
-    <h1> Choose your Hero</h1>
-
-    <form action="{{url_for('GO')}}" method='POST'>
-
-        <p>Choose Skin</p>
-
-        <input type="radio" name="attr1" id="" value='1'>
-        <label for="">Human</label>
-
-        <input type="radio" name="attr1" id="" value = "2">
-        <label for="">Mice</label>
-
-        <input type="radio" name="attr1" id="" value = "3">
-        <label for="">Fish</label>
-
-        <input type="radio" name="attr1" id="" value = "4">
-        <label for="">Alien</label>
 
 
-        <p>Choose Eyes</p>
+    <div class="choose-section">
+        <div class="text">
+            <h1>Create your hero</h1>
+            <h3>Choose your attributes from different organisms to make the ultimate space super hero !</h3>
+        </div>
 
-        <input type="radio" name="attr2" id="" value='1'>
-        <label for="">Human</label>
+        <form action="">
 
-        <input type="radio" name="attr2" id="" value='2'>
-        <label for="">Mice</label>
+            <div class="card">
+                <h3>Choose Skin</h3>
+                <div class="circle" id="circle1"></div>
+                <div class="content" id="content1">
+                    <h2>Skin</h2>
+                    <div class="attributes">
 
-        <input type="radio" name="attr2" id="" value='3'>
-        <label for="">Fish</label>
+                    <div class="input-container">
+                        <input type="radio" name="attr1" id="human">
+                        <div class="radio-title">
+                            <div class="radio-image" id="human1">
+                            <img src="../static/img/astronaut.png" alt="">
+                            </div>
+                            <label for="human">Human</label>
+                        </div>
+                    </div>
 
-        <input type="radio" name="attr2" id="" value='4'>
-        <label for="">Alien</label>
+                    <div class="input-container">
+                        <input type="radio" name="attr1" id="mice">
+                        <div class="radio-title">
+                            <div class="radio-image" id="mice1">
+                            <img src="../static/img/rat.png" alt="">
+                            </div>
+                            <label for="mice">Mice</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-container">
+                        <input type="radio" name="attr1" id="alien">
+                        <div class="radio-title">
+                            <div class="radio-image" id="alien1">
+                            <img src="../static/img/alien.png" alt="">
+                            </div>
+                            <label for="alien">Alien</label>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+                <div class="card-image" id="image1">
+                <img src="../static/img/skin.png" alt="">
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Choose Eyes</h3>
+                <div class="circle" id="circle2"></div>
+                <div class="content" id="content2">
+                    <h2>Eyes</h2>
+                    <div class="attributes">
+
+                    <div class="input-container">
+                        <input type="radio" name="attr2" id="human2">
+                        <div class="radio-title">
+                            <div class="radio-image" id="human12">
+                            <img src="../static/img/astronaut.png" alt="">
+                            </div>
+                            <label for="human">Human</label>
+                        </div>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="radio" name="attr2" id="mice2">
+                        <div class="radio-title">
+                            <div class="radio-image" id="mice12">
+                            <img src="../static/img/rat.png" alt="">
+                            </div>
+                            <label for="mice">Mice</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-container">
+                        <input type="radio" name="attr2" id="alien2">
+                        <div class="radio-title">
+                            <div class="radio-image" id="alien12">
+                            <img src="../static/img/alien.png" alt="">
+                            </div>
+                            <label for="alien">Alien</label>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+                <div class="card-image" id="image2">
+                <img src="../static/img/eye-ball.png" alt="">
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Choose DNA</h3>
+                <div class="circle" id="circle3"></div>
+                <div class="content" id="content3">
+                    <h2>Dna</h2>
+                    <div class="attributes">
+
+                    <div class="input-container">
+                        <input type="radio" name="attr3" id="human3">
+                        <div class="radio-title">
+                            <div class="radio-image" id="human13">
+                            <img src="../static/img/astronaut.png" alt="">
+                            </div>
+                            <label for="human">Human</label>
+                        </div>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="radio" name="attr3" id="mice3">
+                        <div class="radio-title">
+                            <div class="radio-image" id="mice13">
+                            <img src="../static/img/rat.png" alt="">
+                            </div>
+                            <label for="mice">Mice</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-container">
+                        <input type="radio" name="attr3" id="alien3">
+                        <div class="radio-title">
+                            <div class="radio-image" id="alien13">
+                            <img src="../static/img/alien.png" alt="">
+                            </div>
+                            <label for="alien">Alien</label>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+                <div class="card-image" id="image3">
+                <img src="../static/img/dna-structure.png" alt="">
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Choose Muscle</h3>
+                <div class="circle" id="circle4"></div>
+                <div class="content" id="content4">
+                    <h2>Muscle</h2>
+                    <div class="attributes">
+
+                    <div class="input-container">
+                        <input type="radio" name="attr4" id="human4">
+                        <div class="radio-title">
+                            <div class="radio-image" id="human14">
+                            <img src="../static/img/astronaut.png" alt="">
+                            </div>
+                            <label for="human">Human</label>
+                        </div>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="radio" name="attr4" id="mice4">
+                        <div class="radio-title">
+                            <div class="radio-image" id="mice14">
+                            <img src="../static/img/rat.png" alt="">
+                            </div>
+                            <label for="mice">Mice</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-container">
+                        <input type="radio" name="attr4" id="alien4">
+                        <div class="radio-title">
+                            <div class="radio-image" id="alien14">
+                            <img src="../static/img/alien.png" alt="">
+                            </div>
+                            <label for="alien">Alien</label>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+                <div class="card-image" id="image4">
+                <img src="../static/img/radiation.png" alt="">
+                </div>
+            </div>
 
 
-        <p>Choose Head</p>
 
-        <input type="radio" name="attr3" id="" value='1'>
-        <label for="">Human</label>
+            <input type="Submit" name="" id="" value="GO!" style="font-size: 40px; position: absolute; top: 50%; left: 85%;">
 
-        <input type="radio" name="attr3" id="" value='2'>
-        <label for="">Mice</label>
-
-        <input type="radio" name="attr3" id="" value='3'>
-        <label for="">Fish</label>
-
-        <input type="radio" name="attr3" id="" value='4'>
-        <label for="">Alien</label>
-
-
-        <p>Choose Legs</p>
-
-        <input type="radio" name="attr4" id="" value='1'>
-        <label for="">Human</label>
-
-        <input type="radio" name="attr4" id="" value='2'>
-        <label for="">Mice</label>
-
-        <input type="radio" name="attr4" id="" value='3'>
-        <label for="">Fish</label>
-
-        <input type="radio" name="attr4" id="" value='4'>
-        <label for="">Alien</label>
-
-        <div></div>
-        <input type="submit" value="GO!">
-
-    </form>
+        </form>
 
 
 
+    </div>
 
 
 
-
-
-
+    <script src="../static/js/main-menu.js"></script>
 </body>
 </html>
