@@ -25,8 +25,29 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/home',methods=["GET","POST"])
 def index():
-    return render_template("index.html")
+    return render_template('index.html')
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/info')
+def info():
+    return render_template('space-info.html')
+
+@app.route('/mainMenu')
+def mainMenu():
+    return render_template('main-menu.html')
+
+@app.route('/mainMenu/GO',methods=['GET','POST'])
+def GO():
+    attr1 = float(request.form['attr1'])
+    attr2 = float(request.form['attr2'])
+    attr3 = float(request.form['attr3'])
+    attr4 = float(request.form['attr4'])
+    
+    return render_template('go.html',destination = attr1 * attr2 * attr3 * attr4)
+    
 
 if __name__ == '__main__':
     app.run(debug = True)
