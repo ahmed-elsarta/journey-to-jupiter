@@ -20,16 +20,8 @@ import os
 import secrets
 
 app = Flask(__name__)
-app.secret_key = "very secret key"
-mydb = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    passwd="85426Mm854267890",
-    database="felcode"
-)
-mycursor = mydb.cursor(buffered=True)
 
-# -----------------------------------------------------------------------------index-----------------------------------------------------------
+# ----------------------------------------------------------------------------index-----------------------------------------------------------
 @app.route('/')
 @app.route('/home',methods=["GET","POST"])
 def index():
