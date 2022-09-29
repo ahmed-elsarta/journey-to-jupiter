@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- css and fonts and icons -->
     <link rel="stylesheet" href="../static/css/index.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
 
-    
+
     <title>Bio-Superhero</title>
 </head>
 
@@ -25,14 +25,14 @@
         <header>
         <nav>
             <ul class="navbar">
-                
-                <li id="home" class="active"><a href="#">Home</a></li>
-                <li id="about"><a href="#">About</a></li>
-                
-                <li><img src="../static/img/logo.png" alt="" class="logo"></li>
 
-                <li id="info"><a href="#">Info</a></li>
-                <li id="contact"><a href="#">Contact</a></li>    
+              <li id="home" class="active"><a href="{{ url_for('index') }}">Home</a></li>
+              <li id="about"><a href="#info-sec">About</a></li>
+
+              <li><img src="../static/img/logo.png" alt="" class="logo"></li>
+
+              <li id="info"><a href="#about-sec">our team</a></li>
+              <li id="contact"><a href="#contact-sec">Contact</a></li>
 
             </ul>
         </nav>
@@ -51,6 +51,64 @@
             <a href="{{url_for('mainMenu')}}" class="start">Start Game</a>
 
         </section>
+
+        <!-- Info section -->
+        <section class="info-sec" id="info-sec">
+          <br><br> <br><br>
+
+          <h2  class="title">What is our project about?</h2>
+          <p>
+          Space Bio-Superhero is an educational video game, which aims to help people
+          understand space travel.
+          Our mission is to educate people about the different hazards of space travel, And how these hazards affect different organisms. <br>
+          <br>
+          The main goal of the game is to travel as far as possible into space, but there's only one problem: space travel is very dangerous and sometimes lethal.
+          The player will have to build a creature with the capability to survive long enough to escape the solar system. And by doing so, they will be encouraged to learn more about the effects of space travel on different functions of the human body.
+          </p>
+        </section>
+
+        <!-- About us section -->
+        <div class="about-sec" id="about-sec">
+          <br><br> <br><br>
+          <h2 class="title">Who are ASME Flares?</h2>
+          <p>
+          We are a group of students from the faculty of biomedical engineering in cairo university, we're trying
+          to make space research more fun and accessible to the general population.
+          </p>
+        </div>
+
+        <!-- Contact info section -->
+        <div class="contact-sec" id="contact-sec">
+          <br><br> <br><br>
+          <h2  class="title">Our contact information</h2>
+          <p>
+          Mohamed Moustafa Mohamed <br>
+          Momoustafa227@gmail.com <br>
+          01156339608 <br>
+          ( Frontend developer ) <br>
+          <br>
+          Ahmed Mohamed Mahmod <br>
+          ahmedelsarta411@gmail.com <br>
+          01069098182 <br>
+          ( Graphic artist / frontend developer) <br>
+          <br>
+          Magdy Muhammed El Sayed <br>
+          Magdynasr41@gmail.com <br>
+          01148800070 <br>
+          ( Backend developer ) <br>
+          <br>
+          Michael Hany rofael <br>
+          michaelhany510@icloud.com <br>
+          01009994879 <br>
+          ( Backend developer ) <br>
+          <br>
+          Neveen Mohamed Ayman <br>
+          nevinmoh8@gmail.com <br>
+          01146902651 <br>
+          ( Backend developer) <br>
+        </p>
+        <br><br> <br><br>
+        </div>
     </main>
 
 
