@@ -13,8 +13,8 @@ app.secret_key = "very secret key"
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    passwd="magdynasr",
-    database="spaceapps"
+    passwd="85426Mm854267890",
+    database="sakila"
 )
 mycursor = mydb.cursor(buffered=True)
 
@@ -101,7 +101,7 @@ def GO():
         val5= (name,distance)
         mycursor.execute(sql5,val5)
         mydb.commit()
-        return render_template('scenarios.html',destination = destination,scenario = scenario,attr1 = float(request.form['attr1']),attr2 = float(request.form['attr2'])
+        return render_template('scenario2.html',destination = destination,scenario = scenario,attr1 = float(request.form['attr1']),attr2 = float(request.form['attr2'])
                             ,attr3 = float(request.form['attr3']),attr4 = float(request.form['attr4']),distance = distance)
     else:
         return render_template('main-menu.html')
