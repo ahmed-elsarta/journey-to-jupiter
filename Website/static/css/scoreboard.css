@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+body {
+    background-image: url(../img/preloader.jpg);
+    background-size: contain;
+    min-height: 100vh;
+    display:grid;
+    grid-template-columns: 40%;
+    grid-gap: 50px;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+
+table {
+    position: absolute;
+    left: -50px;
+    background: none;
+    transform: translate(25%, 50px);
+    width: 1000px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-shadow: 0 2px 15px rgba(64, 64, 64, .7);
+    border-radius: 12px 12px 12px 12px;
+
+}
+
+td,
+th {
+    padding: 15px 20px;
+    text-align: center;
+}
+
+th {
+    background-color: #11101D;
+    color: #fafafa;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+
+}
+
+tr {
+    width: 100%;
+    background-color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+}
+
+tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+p {
+    color: rgb(85, 81, 81);
+    font-size: 14px;
+}
+
+tr:hover {
+    filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.416));
+}
