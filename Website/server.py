@@ -13,8 +13,8 @@ app.secret_key = "very secret key"
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    passwd="85426Mm854267890",
-    database="sakila"
+    passwd="magdynasr",
+    database="spaceapps"
 )
 mycursor = mydb.cursor(buffered=True)
 
@@ -61,7 +61,7 @@ def about():
 
 @app.route('/info')
 def info():
-    return render_template('space-info.html')
+    return render_template('info.html')
 
 @app.route('/mainMenu', methods = ['GET', 'POST'])
 def mainMenu():
@@ -106,5 +106,18 @@ def GO():
     else:
         return render_template('main-menu.html')
 
+@app.route('/animals_info')
+def animales_info():
+    return render_template('animals-info.html')
+
+@app.route('/space_info')
+def space_info():
+    return render_template('space-info.html')
+
+@app.route('/scoreboard')
+def scoreboard():
+    sql = """SELECT * FROM dashboard"""
+    mycursor.execute(sql,)
+    return render_template('scoreboard.html')
 if __name__ == '__main__':
     app.run(debug = True)
