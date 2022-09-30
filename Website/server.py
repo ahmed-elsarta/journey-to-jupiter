@@ -116,8 +116,9 @@ def space_info():
 
 @app.route('/scoreboard')
 def scoreboard():
-    sql = """SELECT * FROM dashboard"""
+    sql = """SELECT userName,distance FROM dashboard"""
     mycursor.execute(sql,)
-    return render_template('scoreboard.html')
+    result = mycursor.fetchall()
+    return render_template('scoreboard.html', data = result)
 if __name__ == '__main__':
     app.run(debug = True)
