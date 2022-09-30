@@ -1,5 +1,5 @@
 from flask import Flask, flash, redirect, render_template,request,session,url_for
-from flask_sqlalchemy import SQLAlchemy 
+# from flask_sqlalchemy import SQLAlchemy 
 from sqlalchemy import create_engine, Column, String, Integer
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
@@ -13,8 +13,8 @@ app.secret_key = "very secret key"
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    passwd="magdynasr",
-    database="spaceapps"
+    passwd="85426Mm854267890",
+    database="sakila"
 )
 mycursor = mydb.cursor(buffered=True)
 
@@ -75,27 +75,34 @@ def GO():
         attr3 = float(request.form['attr3'])*hazards[2]
         attr4 = float(request.form['attr4'])*hazards[3]
         name = request.form['name']
-        sql5 = """INSERT INTO dashboard (userName) VALUES (%s)"""
-        val5= (name,)
-        mycursor.execute(sql5,val5)
-        mydb.commit()
+        
         destination = attr1 * attr2 * attr3 * attr4
         print(destination)
     
         if(destination > 0.82):
             scenario = 6
+            distance = 5050
         elif destination > 0.6:
             scenario = 5
+            distance = 4400
         elif destination > 0.5:
             scenario = 4
+            distance = 2900
         elif destination > 0.4:
             scenario = 3
+            distance = 1200
         elif destination > 0.3:
             scenario = 2
+            distance = 715
         elif destination > 0.2:
             scenario = 1
+            distance = 225
+        sql5 = """INSERT INTO dashboard (userName,distance) VALUES (%s,%s)"""
+        val5= (name,distance)
+        mycursor.execute(sql5,val5)
+        mydb.commit()
         return render_template('scenarios.html',destination = destination,scenario = scenario,attr1 = float(request.form['attr1']),attr2 = float(request.form['attr2'])
-                            ,attr3 = float(request.form['attr3']),attr4 = float(request.form['attr4']))
+                            ,attr3 = float(request.form['attr3']),attr4 = float(request.form['attr4']),distance = distance)
     else:
         return render_template('main-menu.html')
 
