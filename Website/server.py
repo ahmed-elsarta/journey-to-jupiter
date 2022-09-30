@@ -1,9 +1,5 @@
 from flask import Flask, flash, redirect, render_template,request,session,url_for
-# from flask_sqlalchemy import SQLAlchemy 
-from sqlalchemy import create_engine, Column, String, Integer
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
-import sqlite3
+# from flask_sqlalchemy import SQLAlchemy
 import mysql.connector
 
 
@@ -75,10 +71,10 @@ def GO():
         attr3 = float(request.form['attr3'])*hazards[2]
         attr4 = float(request.form['attr4'])*hazards[3]
         name = request.form['name']
-        
+
         destination = attr1 * attr2 * attr3 * attr4
         print(destination)
-    
+
         if(destination > 0.82):
             scenario = 6
             distance = 5050

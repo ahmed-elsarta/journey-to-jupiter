@@ -56,12 +56,12 @@ video {
     -moz-filter: blur(5vw);
     -ms-filter: blur(5vw);
     filter: blur(5vw);
-    background: linear-gradient(270deg, #0fffc1, #7e0fff);
+    background: linear-gradient(270deg, #7e0fff ,#0fffc1);
     background-size: 200% 200%;
     animation: animateGlow 10s ease infinite;
 }
 
-#box { 
+#box {
     display: none;
     z-index: 99999;
     position: absolute;
@@ -70,19 +70,23 @@ video {
     background: #94999d;
     margin: 0 auto;
     bottom: 28%;
-    left: 27%; 
+    left: 27%;
 }
 
-#box1 { 
+#box1 {
     display: none;
     z-index: 99999;
     position: absolute;
-    width: 40%;
-    height: 40%;
-    background: #94999d;
+    width: 26%;
+    height: 36%;
+    text-align:left;
+    background: #5c9a977d;
+    color:white;
+    border-radius: 5px;
     margin: 0 auto;
-    bottom: 28%;
-    left: 27%; 
+    padding: 25px;
+    bottom: 13%;
+    left: 19%;
 }
 
 #resume {
