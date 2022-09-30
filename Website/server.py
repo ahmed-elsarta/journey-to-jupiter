@@ -11,10 +11,10 @@ from datetime import timedelta
 from genericpath import exists
 from unittest import result
 from flask import Flask, flash, redirect, render_template,request,session,url_for
-from pymysql import NULL
+# from pymysql import NULL
 # from sqlalchemy import false
 # from flask_mysqldb import MySQL
-import mysql.connector
+# import mysql.connector
 import re
 import os
 import secrets
