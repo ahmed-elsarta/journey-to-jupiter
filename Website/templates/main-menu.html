@@ -15,8 +15,13 @@
 
 <body>
 
+    <div id="preloader">
+        <div class="loader"><img src="../static/img/loader.gif" alt=""></div>
+        <div class="loadtext"><p>Loading...</p></div>
+    </div>
+
     
-    <form action="{{url_for('GO')}}" method = 'POST'></form>
+    <form action="{{url_for('GO')}}" method = 'POST'>
 
     <div class="choose-section sec1">
         <div class="text">
@@ -211,6 +216,8 @@
     <input type="submit" value="GO TO SPACE !" class="btn">
 
     </form>
+
+
 
 
     <div class="middle">

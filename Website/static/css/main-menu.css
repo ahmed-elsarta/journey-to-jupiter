@@ -7,6 +7,40 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Preloader */
+
+#preloader{
+    background-image: url(../img/preloader.jpg);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    transition: all 1s linear;
+}
+
+.loader img {
+    z-index: 100;
+    max-height: 400px;
+    max-width: 400px;
+    position: relative;
+    top: 200px;
+    left: calc((100% - 400px) / 2);
+    filter:contrast(1.5)
+}
+
+.loadtext{
+    position: relative;
+    font-family: sans-serif;
+    z-index: 100;
+    color: white;
+    font-size: 40px;
+    left: 695px;
+    top: 180px;
+}
+
+
+
+
 body {
     background-image: url(../img/preloader.jpg);
     background-size: cover;
@@ -19,6 +53,10 @@ body {
 }
 
 /* Choose Section */
+
+form {
+    display: flex;
+}
 
 .choose-section{
     background-color: white;
@@ -274,9 +312,12 @@ body {
 
 .name {
     position: absolute;
+    left: 690px;
+    top: 45%;
 }
 
 .btn {
     position: absolute;
     top: 70%;
+    left: 720px;
 }
