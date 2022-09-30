@@ -1,25 +1,24 @@
-#from crypt import methods
-from distutils.log import debug
-import email
-from email import message
-from time import strptime
-from time import mktime
-from webbrowser import Elinks
-import pandas as pd
-from datetime import datetime
-from datetime import timedelta
-from genericpath import exists
-from unittest import result
 from flask import Flask, flash, redirect, render_template,request,session,url_for
-from pymysql import NULL
-# from sqlalchemy import false
-# from flask_mysqldb import MySQL
+from flask_sqlalchemy import SQLAlchemy 
+from sqlalchemy import create_engine, Column, String, Integer
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
+import sqlite3
 import mysql.connector
-import re
-import os
-import secrets
+
+
 
 app = Flask(__name__)
+app.secret_key = "very secret key"
+mydb = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    passwd="magdynasr",
+    database="spaceapps"
+)
+mycursor = mydb.cursor(buffered=True)
+
+
 
 hazards = [0.2,0.4,0.6,0.8]
 organismsForGravity = {
@@ -64,34 +63,41 @@ def about():
 def info():
     return render_template('space-info.html')
 
-@app.route('/mainMenu')
+@app.route('/mainMenu', methods = ['GET', 'POST'])
 def mainMenu():
     return render_template('main-menu.html')
 
 @app.route('/mainMenu/GO',methods=['GET','POST'])
 def GO():
-    attr1 = float(request.form['attr1'])*hazards[0]
-    attr2 = float(request.form['attr2'])*hazards[1]
-    attr3 = float(request.form['attr3'])*hazards[2]
-    attr4 = float(request.form['attr4'])*hazards[3]
-    destination = attr1 * attr2 * attr3 * attr4
-    print(destination)
+    if request.method  == "POST":
+        attr1 = float(request.form['attr1'])*hazards[0]
+        attr2 = float(request.form['attr2'])*hazards[1]
+        attr3 = float(request.form['attr3'])*hazards[2]
+        attr4 = float(request.form['attr4'])*hazards[3]
+        name = request.form['name']
+        sql5 = """INSERT INTO dashboard (userName) VALUES (%s)"""
+        val5= (name,)
+        mycursor.execute(sql5,val5)
+        mydb.commit()
+        destination = attr1 * attr2 * attr3 * attr4
+        print(destination)
     
-    if(destination > 0.82):
-        scenario = 6
-    elif destination > 0.6:
-        scenario = 5
-    elif destination > 0.5:
-        scenario = 4
-    elif destination > 0.4:
-        scenario = 3
-    elif destination > 0.3:
-        scenario = 2
-    elif destination > 0.2:
-        scenario = 1
-    return render_template('scenarios.html',destination = destination,scenario = scenario,attr1 = float(request.form['attr1']),attr2 = float(request.form['attr2'])
-                           ,attr3 = float(request.form['attr3']),attr4 = float(request.form['attr4']))
-    
+        if(destination > 0.82):
+            scenario = 6
+        elif destination > 0.6:
+            scenario = 5
+        elif destination > 0.5:
+            scenario = 4
+        elif destination > 0.4:
+            scenario = 3
+        elif destination > 0.3:
+            scenario = 2
+        elif destination > 0.2:
+            scenario = 1
+        return render_template('scenarios.html',destination = destination,scenario = scenario,attr1 = float(request.form['attr1']),attr2 = float(request.form['attr2'])
+                            ,attr3 = float(request.form['attr3']),attr4 = float(request.form['attr4']))
+    else:
+        return render_template('main-menu.html')
 
 if __name__ == '__main__':
     app.run(debug = True)
