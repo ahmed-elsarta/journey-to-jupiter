@@ -14,8 +14,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px 50px;
-    /* overflow: hidden; */
+    padding: 20px 10px;
+    overflow: hidden;
 }
 
 /* Choose Section */
@@ -27,26 +27,27 @@ body {
     align-items: center;
     text-align: center;
     padding: 20px;
-    width: 50%;
-    height: 120vh;
+    width: 33%;
+    height: 80vh;
     border-radius: 40px;
 }
 
-.text h1 {
-    margin-bottom: 10px;
-    color: rgb(247, 11, 133);
+.sec1{
+    margin-right: 500px;
 }
 
-.text h3{
+.text h1 {
+    font-size: 28px;
     margin-bottom: 20px;
+    color: rgb(247, 11, 133);
 }
 
 /* Cards */
 
 .card {
     position: relative;
-    width: 600px;
-    height: 150px;
+    width: 450px;
+    height: 500px;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -57,7 +58,7 @@ body {
 
 .card h3 {
     position: absolute;
-    font-size: 26px;
+    font-size: 20px;
 }
 
 .card .circle{
@@ -78,7 +79,7 @@ body {
     width: 100%;
     height: 100%;
     background: #1d1135;
-    clip-path: circle(60px at center);
+    clip-path: circle(50px at center);
     transition: 0.5s;
 }
 
@@ -89,17 +90,18 @@ body {
 
 .card-image img{
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 53%;
     transform: translate(-50%, -50%);
-    height: 120px;
+    height: 100px;
     cursor: pointer;
     transition: 0.5s;
 }
 
 .card:hover .card-image img {
-    left: 90%;
-    height: 220px;
+    left: 95%;
+    top: 30%;
+    height: 100px;
 }
 
 
@@ -107,7 +109,7 @@ body {
 
 .card .content{
     position: relative;
-    width: 50%;
+    width: 55%;
     left: 20%;
     padding: 20px 20px 20px 40px;
     transition: 0.5s;
@@ -125,9 +127,10 @@ body {
 .card .content h2{
     color: rgb(247, 11, 133);
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 20px;
     line-height: 1em;
-    margin-bottom: 10px;
+    margin-left: 70px;
+    margin-bottom: 70px;
 }
 
 
@@ -148,17 +151,16 @@ body {
 
 .image-opened img {
     position: absolute;
-    top:40%;
-    left: 90%;
+    top:45%;
+    left: 95%;
     transform: translate(-50%, -50%);
-    height: 120px;
+    height: 100px;
     transition: 0.5s;
 }
 
-
 .content-opened{
     position: relative;
-    width: 50%;
+    width: 55%;
     top: -45px;
     left: -120px;
     padding: 20px 20px 20px 40px;
@@ -170,19 +172,19 @@ body {
 .content-opened h2{
     color: rgb(247, 11, 133);
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 20px;
     line-height: 1em;
-    margin-bottom: 10px;
+    margin-left: 70px;
+    margin-bottom: 70px;
 }
-
 
 
 /* For Radio-Buttons (Selections) */
 
 .attributes {
     position: absolute;
-    left: 73%;
-    top: 20%;
+    left: 66%;
+    top: 40%;
     display: flex;
     flex: wrap;
     justify-content: center;
@@ -190,7 +192,7 @@ body {
 
 .input-container {
     position: relative;
-    width: 30px;
+    width: 38px;
     margin: 33px;
 }
 
@@ -220,7 +222,7 @@ body {
 }
 
 .radio-title label {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: black;
     margin-top: 0;
@@ -248,4 +250,33 @@ body {
 .active img {
     width: 80px;
     height: 80px;
+}
+
+/* middle div */
+.middle {
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    left: 38%;
+    top: 5%;
+}
+
+.middle img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.middle h1 {
+    color: rgb(247, 11, 133);
+}
+
+/* name and btn */
+
+.name {
+    position: absolute;
+}
+
+.btn {
+    position: absolute;
+    top: 70%;
 }
