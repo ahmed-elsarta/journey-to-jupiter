@@ -4,12 +4,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/scenario2.css">
-    
+
     <title>scenario2</title>
 </head>
 <body onload="setupVideo()">
 
-    <div class="container">
+  <div class="container">
 		<div class="blur">
       {%if scenario == 1%}
       <video id="myVideo" width="320" height="320">
@@ -116,10 +116,10 @@
               </div>
               {%endif%}
             </div>
-           
+
 
 		</div>
-    </div>	
+  </div>
     <!-- just a comment -->
 
 
@@ -135,12 +135,12 @@
         video.addEventListener('ended', function() {
         var box = document.getElementById('box');
         box1.style.display = 'block';
-        endVideo = 1;    
+        endVideo = 1;
         })
       }
- 
+
   var myVideo = document.getElementById('myVideo');
-  
+
   myVideo.addEventListener('click', function () {
     if(endVideo==0){
           if (myVideo.paused == false) {
@@ -154,7 +154,7 @@
           }
         }
         else{
-            video.pause();         
+            video.pause();
         }
       });
 </script>
@@ -162,7 +162,7 @@
 
 
 
-<!-- 
+<!--
 
 var video = document.getElementById('myVideo');
 
@@ -188,10 +188,10 @@ video.onplay = function() {
       else{
           box1.style.display = 'block';
           video.pause();
- 
+
          }
     box.style.display = 'block';
   },pausepoints[index])
-  
+
 }
   -->
