@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- css and fonts and icons -->
+    <link rel="stylesheet" href="../static/css/scoreboard.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+    
+    <title>Document</title>
+
+</head>
+
+
+<body>
+
+    <section class="home-section">
+
+        <div class="panel">
+
+            <table action="{{url_for('scoreboard')}}" method="POST">
+
+
+                <tr>
+                    <th>Hero Name</th>
+                    <th>Distance</th>
+                </tr>
+
+                <tbody>
+                    {% for r in data %}
+                    <tr>          
+                        <td>{{ r.0 }}</td>
+                        <td>{{ r.1 }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+
+            </table>
+        </div>
+
+    </section>
+    
+
+
+</body>
+</html>

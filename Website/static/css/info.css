@@ -19,6 +19,15 @@ body {
 }
 
 
+.text {
+    position: absolute;
+    top: 10%;
+    padding: 20px;
+    color: rgb(247, 11, 133);
+    background-color: #edf0f1;;
+    border-radius: 20px;
+}
+
 /* Card Styling */
 
 .card {
@@ -78,7 +87,7 @@ body {
 
 .card .content{
     position: relative;
-    width: 50%;
+    width: 60%;
     left: 20%;
     padding: 20px 20px 20px 40px;
     transition: 0.5s;
@@ -101,6 +110,7 @@ body {
 }
 
 .card .content p{
+    font-weight: 500;
     color: black;
 }
 
