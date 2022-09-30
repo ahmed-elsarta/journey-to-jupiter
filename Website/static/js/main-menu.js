@@ -3,7 +3,7 @@ var loader = document.getElementById("preloader");
 
 window.addEventListener("load", function () {
   loader.style.opacity = 0;
-  loader.style.zIndex = 1;
+  loader.style.zIndex = -1;
 });
 
 // Animation
