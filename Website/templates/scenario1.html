@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/scenario.css">
+    
+    <title>Scenario1</title>
+</head>
+<body>
+
+    <div class="container">
+		<div class="blur">
+			<video id="myVideo" width="320" height="320">
+               <source src="../static/img/1 mars sped up.mp4" autoplay muted>
+               <source id="video2" src="../static/img/2 jupiter sped up.mp4" autoplay muted>
+            </video>
+            <div id="box"></div>
+            </div>
+
+		</div>
+    </div>	
+
+
+</body>
+<script type='text/javascript'>
+
+    function setupVideo () {
+          var video = document.getElementById('myVideo')
+          video.addEventListener('ended', function() {
+          var box = document.getElementById('box');
+          box.style.display = 'block';    
+          })
+        }
+
+        const video = document.getElementById('myVideo');
+        video.onplay = function() {
+          window.setTimeout(()=>{
+            const video = document.getElementById('myVideo');
+            video.pause();
+          }, 3700)
+        }
+     
+    var myVideo = document.getElementById('myVideo');
+    myVideo.addEventListener('click', function () {
+            if (myVideo.paused == false) {
+                myVideo.pause();
+                myVideo.firstChild.nodeValue = 'Play';
+                box.style.display = 'none';
+            } else {
+                myVideo.play();
+                myVideo.firstChild.nodeValue = 'Pause';
+                box.style.display = 'none';
+            }
+        });
+
+</script>
+</html>

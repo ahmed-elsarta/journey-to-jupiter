@@ -3,7 +3,7 @@ html {
 }
 
 body{
-  font-family: "Century Gothic", Arial, sans-serif;
+    font-family: "Century Gothic", Arial, sans-serif;
 }
 
 :root{
@@ -27,8 +27,8 @@ header {
     z-index: 3;
     position: sticky;
     top: 0;
-    margin-left: 20%;
-    width: 60%;
+    margin-left: 13.5%;
+    width: 74%;
     background-color: #edf0f1;
     border-radius: 0 0 20px 20px;
 }
@@ -71,8 +71,8 @@ ul{
     position: absolute;
     background-color: var(--clr-neon);
     top: 120%;
-    left: 0;
-    width: 100%;
+    left: 15px;
+    width: 50%;
     height: 100%;
     transform: perspective(1em) rotateX(20deg) scale(2, 0.3);
     filter:blur(0.5em);
@@ -182,27 +182,27 @@ li {
 
 /* About Section */
 .info-sec{
-  display:block;
-  margin-top: 350px;
-  text-align: center;
-  width:70%;
-  margin-left:15%;
+    display:block;
+    margin-top: 350px;
+    text-align: center;
+    width:70%;
+    margin-left:15%;
 }
 
 .info-sec p{
-  font-size: 1.4em;
+    font-size: 1.4em;
 }
 .about-sec, .contact-sec{
-  display:block;
-  margin-top:50px;
-  maring-bottom:20px;
-  text-align: center;
-  width:70%;
-  margin-left:15%;
+    display:block;
+    margin-top:50px;
+    margin-bottom:20px;
+    text-align: center;
+    width:70%;
+    margin-left:15%;
 }
 
 .about-sec p, .contact-sec p{
-  font-size: 1.4em;
+    font-size: 1.4em;
 }
 
 

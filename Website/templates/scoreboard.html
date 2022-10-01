@@ -9,24 +9,15 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
 
     <title>Document</title>
-
 </head>
-
-
 <body>
-
     <section class="home-section">
-
         <div class="panel">
-
             <table action="{{url_for('scoreboard')}}" method="POST">
-
-
                 <tr>
                     <th>Hero Name</th>
                     <th>Distance</th>
                 </tr>
-
                 <tbody>
                     {% for r in data %}
                     <tr>
@@ -35,13 +26,8 @@
                     </tr>
                     {% endfor %}
                 </tbody>
-
             </table>
         </div>
-
     </section>
-
-
-
 </body>
 </html>
