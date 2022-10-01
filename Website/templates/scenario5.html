@@ -32,7 +32,17 @@
           box.style.display = 'block';    
           })
         }
+
+        const video = document.getElementById('myVideo');
+        video.onplay = function() {
+          window.setTimeout(()=>{
+            const video = document.getElementById('myVideo');
+            video.pause()
+          }, 3700)
+        }
     
+
+
     var myVideo = document.getElementById('myVideo');
     myVideo.addEventListener('click', function () {
             if (myVideo.paused == false) {

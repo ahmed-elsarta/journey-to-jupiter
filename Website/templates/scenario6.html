@@ -25,13 +25,24 @@
 </body>
 <script type='text/javascript'>
 
+    var end_video=0;
     function setupVideo () {
           var video = document.getElementById('myVideo')
           video.addEventListener('ended', function() {
           var box = document.getElementById('box');
-          box.style.display = 'block';    
+          box.style.display = 'block';
+          end_video=1;    
           })
         }
+
+
+        const video = document.getElementById('myVideo');
+        video.onplay = function() {
+          window.setTimeout(()=>{
+            const video = document.getElementById('myVideo');
+            video.pause()
+          }, 3700)
+        }    
     
     var myVideo = document.getElementById('myVideo');
     myVideo.addEventListener('click', function () {
@@ -40,9 +51,10 @@
                 myVideo.firstChild.nodeValue = 'Play';
                 box.style.display = 'none';
             } else {
+                if(end_video=0){
                 myVideo.play();
                 myVideo.firstChild.nodeValue = 'Pause';
-                box.style.display = 'none';
+                box.style.display = 'none';}
             }
         });
 

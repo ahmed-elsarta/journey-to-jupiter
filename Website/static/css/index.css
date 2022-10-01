@@ -3,7 +3,7 @@ html {
 }
 
 body{
-  font-family: "Century Gothic", Arial, sans-serif;
+    font-family: "Century Gothic", Arial, sans-serif;
 }
 
 :root{
@@ -184,27 +184,27 @@ li {
 /* About Section */
 
 .info-sec{
-  display:block;
-  margin-top: 350px;
-  text-align: center;
-  width:70%;
-  margin-left:15%;
+    display:block;
+    margin-top: 350px;
+    text-align: center;
+    width:70%;
+    margin-left:15%;
 }
 
 .info-sec p{
-  font-size: 1.4em;
+    font-size: 1.4em;
 }
 .about-sec, .contact-sec{
-  display:block;
-  margin-top:50px;
-  maring-bottom:20px;
-  text-align: center;
-  width:70%;
-  margin-left:15%;
+    display:block;
+    margin-top:50px;
+    margin-bottom:20px;
+    text-align: center;
+    width:70%;
+    margin-left:15%;
 }
 
 .about-sec p, .contact-sec p{
-  font-size: 1.4em;
+    font-size: 1.4em;
 }
 
 

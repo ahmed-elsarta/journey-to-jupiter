@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/scenario.css">
     
-    <title>Scenario1</title>
+    <title>Scenario3</title>
 </head>
 <body onload="setupVideo()">
 
@@ -30,6 +30,14 @@
         var box = document.getElementById('box');
         box.style.display = 'block';    
         })
+      }
+
+      const video = document.getElementById('myVideo');
+      video.onplay = function() {
+        window.setTimeout(()=>{
+          const video = document.getElementById('myVideo');
+          video.pause()
+        }, 3700)
       }
    
     var myVideo = document.getElementById('myVideo');

@@ -4,59 +4,52 @@
 html, body {
     margin: 0 auto;
     height: 100%;
-    /* overflow: hidden; */
 }
-
 body {
+
     display: flex;
     align-items: center;
     font-family: monospace;
     justify-content: center;
+    background-color: #1d212b;
 }
 
 .container {
     position: relative;
     background-image: url(../img/preloader.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
     width: 100%;
-}
 
-.blur {
+  }
+  .blur {
     text-align: center;
+    width: 100%;
     backdrop-filter: blur(2px);
+    background-color: rgb(255 255 255 / 0%);
     font-size: 30px;
     height: 100%;
-}
-
-.blur video {
-    top: 5%;
-    width: 75%;
-    height: 90%;
-    border: #edf0f1 solid;
-    border-radius: 20px;
-}
-
-
+  }
 video {
     position: relative;
+    top: 15%;
+    width: 65%;
+    height: 75%;
+    line-height: 30vw;
+    text-align: center;
+    animation: textColor 10s ease infinite;
     z-index: 9999;
 
 }
 
-
-
-<<<<<<< HEAD
-/* .blur:after {
-=======
 .blur:after {
->>>>>>> 6464c7c6f592f239ff25136258fb1c306a181fef
     position: absolute;
     content: "";
     right: 14%;
     z-index: -1;
     height: 85%;
-    width: 83%;
+    width: 77%;
     margin-top: 4%;
     transform: scale(0.75);
     -webkit-filter: blur(5vw);
@@ -66,9 +59,9 @@ video {
     background: linear-gradient(270deg, #0fffc1, #7e0fff);
     background-size: 200% 200%;
     animation: animateGlow 10s ease infinite;
-} */
+}
 
-/* #box {
+#box {
     display: none;
     z-index: 99999;
     position: absolute;
@@ -78,26 +71,9 @@ video {
     margin: 0 auto;
     bottom: 28%;
     left: 27%;
-} */
-
-#box1 {
-<<<<<<< HEAD
-    display: none;
-    z-index: 99999;
-    padding: 10px;
-    position: absolute;
-    width: 65%;
-    height: 75%;
-    background: #edf0f1;
-    left: 17%;
-    top: 13%;
-    border-radius: 20px;
 }
 
-.hints p {
-    font-size: 20px;
-=======
-  display: none;
+#box1 {
   z-index: 99999;
   position: absolute;
   width: 46%;
@@ -109,25 +85,8 @@ video {
   padding: 25px;
   border-radius: 15px;
   font-size: 0.5em;
->>>>>>> 6464c7c6f592f239ff25136258fb1c306a181fef
 }
 
-.title {
-    color: rgb(247, 11, 133);
-    margin-bottom: -20px;
-}
-
-.btns a{
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
-    margin-top: 30px;
-    font-weight: 500;
-    padding: 10px 20px;
-    font-size: 1.1em;
-    background: rgb(30, 30, 30);
-    color: white;
-    border-radius: 30px;
-    transition: 0.3s ease;
-    margin: 20px 25px 0 25px;
+#resume {
+    color: brown;
 }
