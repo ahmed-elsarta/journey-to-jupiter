@@ -15,7 +15,6 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor(buffered=True)
 
 
-
 hazards = [0.2,0.4,0.6,0.8]
 organismsForGravity = {
     'human': 4.8*hazards[0],

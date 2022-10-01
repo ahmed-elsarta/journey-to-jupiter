@@ -41,7 +41,11 @@
             <div id="box">
             </div>
             <div id="box1">
+              {% if scenario == 6%}
+              <h5>You are the super hero :) you travelled {{distance}} million kilometers</h5>
+              {%else%}
               <h5>You died :( but you travelled {{distance}} million kilometers</h5>
+              {%endif%}
               {%if attr1 == 4.8%}
               <div class="hints">
 
