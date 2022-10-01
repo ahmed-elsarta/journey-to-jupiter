@@ -46,11 +46,7 @@ video {
 
 
 
-<<<<<<< HEAD
 /* .blur:after {
-=======
-.blur:after {
->>>>>>> 6464c7c6f592f239ff25136258fb1c306a181fef
     position: absolute;
     content: "";
     right: 14%;
@@ -81,7 +77,6 @@ video {
 } */
 
 #box1 {
-<<<<<<< HEAD
     display: none;
     z-index: 99999;
     padding: 10px;
@@ -96,20 +91,6 @@ video {
 
 .hints p {
     font-size: 20px;
-=======
-  display: none;
-  z-index: 99999;
-  position: absolute;
-  width: 46%;
-  height: 59%;
-  background: #94999d;
-  margin: 0 auto;
-  bottom: 16%;
-  left: 27%;
-  padding: 25px;
-  border-radius: 15px;
-  font-size: 0.5em;
->>>>>>> 6464c7c6f592f239ff25136258fb1c306a181fef
 }
 
 .title {
