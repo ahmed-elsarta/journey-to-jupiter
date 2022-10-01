@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/scenario2.css">
+    <link rel="stylesheet" href="../static/css/scenario.css">
 
     <title>scenario2</title>
 </head>
@@ -11,6 +11,7 @@
 
   <div class="container">
 		<div class="blur">
+
       {%if scenario == 1%}
       <video id="myVideo" width="320" height="320">
         <source src="../static/img/1 mars sped up.mp4" autoplay muted>
@@ -39,6 +40,11 @@
 
             
             
+
+			<video id="myVideo" width="320" height="320">
+               <source src="../static/img/jupiter.mp4" autoplay muted>
+            </video>
+
             <div id="box">
               
                 <button id="resume" type="button">Click Me!</button>
@@ -127,9 +133,6 @@
 <script type='text/javascript'>
 
     var endVideo=0;
-    var pausepoints=[3000,10750];
-    var index=0;
-
     function setupVideo () {
         var video = document.getElementById('myVideo')
         video.addEventListener('ended', function() {
@@ -164,9 +167,25 @@
 
 <!--
 
-var video = document.getElementById('myVideo');
+      const video = document.getElementById('myVideo');
+        setTimeout(function(){
+        video.pause();
+        box.style.display = 'block';
+        var button = document.getElementById('resume')
+        button.onclick = function() {
+        video.play();
+        box.style.display = 'none';}
+        setTimeout(function() {
+        video.pause();
+        box.style.display = 'block';
+        var button = document.getElementById('resume')
+        button.onclick = function() {
+        video.play();
+        box.style.display = 'none';}   
+        }, 1000);}, 2000);
 
 
+<<<<<<< Updated upstream
 video.onplay = function() {
   window.setTimeout(()=>{
     const video = document.getElementById('myVideo');
@@ -195,3 +214,7 @@ video.onplay = function() {
 
 }
   -->
+      
+</script>
+</html>
+
