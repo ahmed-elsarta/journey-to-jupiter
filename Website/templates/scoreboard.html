@@ -19,10 +19,10 @@
                     <th>Distance</th>
                 </tr>
                 <tbody>
-                    {% for r in data %}
+                    {% for i in range(0,data.shape[0]) %}
                     <tr>
-                        <td>{{ r.0 }}</td>
-                        <td>{{ r.1 }}</td>
+                        <td>{{data[0][i]}}</td>>
+                        <td>{{data[1][i]}}</td>>
                     </tr>
                     {% endfor %}
                 </tbody>

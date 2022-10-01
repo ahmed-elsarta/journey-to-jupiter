@@ -1,7 +1,7 @@
 from flask import Flask, flash, redirect, render_template,request,session,url_for
 # from flask_sqlalchemy import SQLAlchemy
 import mysql.connector
-
+import pandas as pd
 
 
 app = Flask(__name__)
@@ -114,6 +114,16 @@ def scoreboard():
     sql = """SELECT userName,distance FROM dashboard"""
     mycursor.execute(sql,)
     result = mycursor.fetchall()
+    result = pd.DataFrame(result)
+
+    print(result)
+    if not result.empty:
+        result[1] = result[1].astype(int)
+        result = result.sort_values(by=1,ascending = False)
+        result.index = range(len(result.index))
+        print(result)
+    
+    
     return render_template('scoreboard.html', data = result)
 if __name__ == '__main__':
     app.run(debug = True)
