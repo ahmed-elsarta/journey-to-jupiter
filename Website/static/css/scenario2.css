@@ -61,7 +61,7 @@ video {
     animation: animateGlow 10s ease infinite;
 }
 
-#box { 
+#box {
     display: none;
     z-index: 99999;
     position: absolute;
@@ -70,19 +70,21 @@ video {
     background: #94999d;
     margin: 0 auto;
     bottom: 28%;
-    left: 27%; 
+    left: 27%;
 }
 
-#box1 { 
-    display: none;
-    z-index: 99999;
-    position: absolute;
-    width: 40%;
-    height: 40%;
-    background: #94999d;
-    margin: 0 auto;
-    bottom: 28%;
-    left: 27%; 
+#box1 {
+  z-index: 99999;
+  position: absolute;
+  width: 46%;
+  height: 59%;
+  background: #94999d;
+  margin: 0 auto;
+  bottom: 16%;
+  left: 27%;
+  padding: 25px;
+  border-radius: 15px;
+  font-size: 0.5em;
 }
 
 #resume {

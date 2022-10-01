@@ -13,10 +13,9 @@ body {
     background-image: url(../img/preloader.jpg);
     background-size: contain;
     min-height: 100vh;
-    display:grid;
-    grid-template-columns: 40%;
-    grid-gap: 50px;
-    justify-content: space-around;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -26,9 +25,9 @@ body {
 
 table {
     position: absolute;
-    left: -50px;
+    left: 16%;
+    top: 15%;
     background: none;
-    transform: translate(25%, 50px);
     width: 1000px;
     border-collapse: collapse;
     border-spacing: 0;
@@ -44,7 +43,7 @@ th {
 }
 
 th {
-    background-color: #11101D;
+    background-color: #1d1135;
     color: #fafafa;
     font-family: "Poppins", sans-serif;
     font-weight: 200;
