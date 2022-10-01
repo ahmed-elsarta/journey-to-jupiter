@@ -63,7 +63,7 @@ def info():
 def mainMenu():
     return render_template('main-menu.html')
 
-@app.route('/mainMenu/GO',methods=['GET','POST'])
+@app.route('/main-menu/GO',methods=['GET','POST'])
 def GO():
     if request.method  == "POST":
         attr1 = float(request.form['attr1'])*hazards[0]
