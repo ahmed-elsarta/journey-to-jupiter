@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/scenario.css">
+    
+    <title>Scenario5</title>
+</head>
+<body onload="setupVideo()">
+
+    <div class="container">
+		<div class="blur">
+			<video id="myVideo" width="320" height="320">
+               <source src="../static/img/5 neptune sped up.mp4" autoplay muted>
+            </video>
+
+            <div id="box"></div>
+
+		</div>
+    </div>	
+
+
+</body>
+<script type='text/javascript'>
+
+    function setupVideo () {
+          var video = document.getElementById('myVideo')
+          video.addEventListener('ended', function() {
+          var box = document.getElementById('box');
+          box.style.display = 'block';    
+          })
+        }
+    
+    var myVideo = document.getElementById('myVideo');
+    myVideo.addEventListener('click', function () {
+            if (myVideo.paused == false) {
+                myVideo.pause();
+                myVideo.firstChild.nodeValue = 'Play';
+                box.style.display = 'none';
+            } else {
+                myVideo.play();
+                myVideo.firstChild.nodeValue = 'Pause';
+                box.style.display = 'none';
+            }
+        });
+
+</script>
+</html>

@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0 auto;
+    height: 100%;
+}
+body {
+
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    justify-content: center;
+    background-color: #1d212b;
+}
+
+.container {
+    position: relative;
+    background-image: url(../img/preloader.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+
+  }
+  .blur {
+    text-align: center;
+    width: 100%;
+    backdrop-filter: blur(2px);
+    background-color: rgb(255 255 255 / 0%);
+    font-size: 30px;
+    height: 100%;
+  }
+video {
+    position: relative;
+    top: 15%;
+    width: 65%;
+    height: 75%;
+    line-height: 30vw;
+    text-align: center;
+    animation: textColor 10s ease infinite;
+    z-index: 9999;
+
+}
+
+.blur:after {
+    position: absolute;
+    content: "";
+    right: 14%;
+    z-index: -1;
+    height: 85%;
+    width: 77%;
+    margin-top: 4%;
+    transform: scale(0.75);
+    -webkit-filter: blur(5vw);
+    -moz-filter: blur(5vw);
+    -ms-filter: blur(5vw);
+    filter: blur(5vw);
+    background: linear-gradient(270deg, #0fffc1, #7e0fff);
+    background-size: 200% 200%;
+    animation: animateGlow 10s ease infinite;
+}
+
+#box {
+    display: none;
+    z-index: 99999;
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    background: #94999d;
+    margin: 0 auto;
+    bottom: 28%;
+    left: 27%;
+}
+
+#box1 {
+  z-index: 99999;
+  position: absolute;
+  width: 46%;
+  height: 59%;
+  background: #94999d;
+  margin: 0 auto;
+  bottom: 16%;
+  left: 27%;
+  padding: 25px;
+  border-radius: 15px;
+  font-size: 0.5em;
+}
+
+#resume {
+    color: brown;
+}
