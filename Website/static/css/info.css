@@ -19,14 +19,45 @@ body {
 }
 
 
-.text {
+/* title */
+
+
+.logo img {
     position: absolute;
-    top: 10%;
-    padding: 20px;
-    color: rgb(247, 11, 133);
-    background-color: #edf0f1;;
-    border-radius: 20px;
+    width: 150px;
+    height: 150px;
+    top: 20px;
+    left: 26%;
 }
+
+.text {
+    padding: 10px 30px;
+    border-radius: 20px;
+    background: #edf0f1;
+    position: absolute;
+    top: 8%;
+    left: 35%;
+    text-align: center;
+}
+
+.text h1{
+    font-size: 28px;
+    color: rgb(247, 11, 133);
+}
+
+.text h3{
+    color: black;
+}
+
+
+.container{
+    position: absolute;
+    top: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* Card Styling */
 

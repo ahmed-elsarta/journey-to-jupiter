@@ -7,6 +7,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root{
+    --clr-neon: rgb(247, 11, 133);
+    --clr-bg: hsl(323 21% 16%);
+}
+
 /* Preloader */
 
 #preloader{
@@ -42,7 +47,7 @@
 
 
 body {
-    background-image: url(../img/preloader.jpg);
+    background-image: url(../img/background.jpg);
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -327,24 +332,109 @@ form {
     box-shadow: 0 0 2em 0.5em rgba(247, 11, 133, 0.514);
 }
 
+
+/* buttons */
+
 .btn {
+    background: none;
     position: absolute;
-    top: 70%;
-    left: 720px;
+    top: 60%;
+    left: 44.5%;
+    color: var(--clr-neon);
+    font-size: 1.5rem;
+    display: inline-block;
+    border: var(--clr-neon) 0.125em solid;
+    border-radius: 0.25em;
+    padding: 0.1em 0.3em;
+    cursor: pointer;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+    position: absolute;
+    transition: background-color 0.2s linear;
 }
+
+.btn::before{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background-color: var(--clr-neon);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1.5em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(2em);
+}
+
+.btn:hover,
+.btn:focus {
+    background: var(--clr-neon);
+    color: white;
+    text-shadow: none;
+}
+
+.btn::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: rgba(247, 11, 133, 0.514);
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
+
+.btn:hover::after{
+    opacity: 0.8;
+}
+
+
+
+
 
 
 .Info-btn a{
     text-decoration: none;
-    color: black;
-    padding: 3px;
-    border-radius: 3px;
-    background-color: white;
+    color: var(--clr-neon);
 }
 
-
 .Info-btn {
-    position:absolute;
-    top: 72vh;
-    left: 38%;
+    font-size: 1.5rem;
+    display: inline-block;
+    border: var(--clr-neon) 0.125em solid;
+    border-radius: 0.25em;
+    color: var(--clr-neon);
+    padding: 0.1em 0.3em;
+    cursor: pointer;=
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+    position: absolute;
+    top: 130%;
+    left: 33%;
+    transition: background-color 0.2s linear;
+}
+
+.Info-btn::before{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background-color: var(--clr-neon);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1.5em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(2em);
+}
+
+.Info-btn:hover,
+.Info-btn:focus {
+    background: var(--clr-neon);
+    color: white;
+    text-shadow: none;
+}
+
+.Info-btn:hover a{
+    color: white;
 }

@@ -9,7 +9,7 @@ app.secret_key = "very secret key"
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    passwd="root",
+    passwd="1234",
     database="sakila"
 )
 mycursor = mydb.cursor(buffered=True)
@@ -118,4 +118,4 @@ def scoreboard():
     return render_template('scoreboard.html', data = result)
 if __name__ == '__main__':
     app.run(debug = True)
-# Push for Neveen.
+
