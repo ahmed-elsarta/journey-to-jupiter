@@ -9,8 +9,8 @@ app.secret_key = "very secret key"
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    passwd="1234",
-    database="sakila"
+    passwd="magdynasr",
+    database="spaceapps"
 )
 mycursor = mydb.cursor(buffered=True)
 
