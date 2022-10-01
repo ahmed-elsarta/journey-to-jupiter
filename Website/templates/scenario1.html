@@ -8,14 +8,16 @@
     
     <title>Scenario1</title>
 </head>
-<body onload="setupVideo()">
+<body>
 
     <div class="container">
 		<div class="blur">
 			<video id="myVideo" width="320" height="320">
                <source src="../static/img/1 mars sped up.mp4" autoplay muted>
+               <source id="video2" src="../static/img/2 jupiter sped up.mp4" autoplay muted>
             </video>
             <div id="box"></div>
+            </div>
 
 		</div>
     </div>	
@@ -30,6 +32,14 @@
           var box = document.getElementById('box');
           box.style.display = 'block';    
           })
+        }
+
+        const video = document.getElementById('myVideo');
+        video.onplay = function() {
+          window.setTimeout(()=>{
+            const video = document.getElementById('myVideo');
+            video.pause();
+          }, 3700)
         }
      
     var myVideo = document.getElementById('myVideo');
