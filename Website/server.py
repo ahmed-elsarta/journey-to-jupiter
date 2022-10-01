@@ -9,8 +9,8 @@ app.secret_key = "very secret key"
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    passwd="1234",
-    database="sakila"
+    passwd="magdynasr",
+    database="spaceapps"
 )
 mycursor = mydb.cursor(buffered=True)
 
@@ -63,7 +63,7 @@ def info():
 def mainMenu():
     return render_template('main-menu.html')
 
-@app.route('/main-menu/GO',methods=['GET','POST'])
+@app.route('/mainMenu/GO',methods=['GET','POST'])
 def GO():
     if request.method  == "POST":
         attr1 = float(request.form['attr1'])*hazards[0]

@@ -6,7 +6,6 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
 :root{
     --clr-neon: rgb(247, 11, 133);
     --clr-bg: hsl(323 21% 16%);
@@ -47,7 +46,7 @@
 
 
 body {
-    background-image: url(../img/background.jpg);
+      background-image: url(../img/background.jpg);
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -484,4 +483,3 @@ form {
 .score-btn:hover a{
     color: white;
 }
-

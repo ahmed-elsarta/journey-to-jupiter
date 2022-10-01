@@ -38,13 +38,13 @@
      </video>
       {%endif%}
 
-            <div id="box">              
+            <div id="box">
             </div>
             <div id="box1">
-              <h5>you travelled {{distance}} million kilometers</h5>
+              <h5>You died :( but you travelled {{distance}} million kilometers</h5>
               {%if attr1 == 4.8%}
               <div class="hints">
-                  
+
                   <p class="title">for muscles</p>
                   <p>Yes! Sometimes human respond to hazards better than any other creature! Although that hazard affects us, but we survived.</p>
               </div>
@@ -61,7 +61,7 @@
                   </p>
               </div>
               {%endif%}
-          
+
               {%if attr2 == 2.4%}
               <div class="hints">
                   <p class="title">for radiation shield</p>
@@ -78,7 +78,7 @@
                   <p>I understand your biased situation but unfortunately we are not a good fit here.</p>
               </div>
               {%endif%}
-          
+
               {%if attr3 == 1.55%}
               <div class="hints">
                   <p class="title">for DNA </p>
@@ -87,7 +87,7 @@
               {%elif attr3 == 1.3%}
               <div class="hints">
                   <p class="title">for DNA</p>
-                  <p>Nice guess but the best decision to make is to try another option to reach the furthest destination! 
+                  <p>Nice guess but the best decision to make is to try another option to reach the furthest destination!
                     A good reward is waiting for you there 😉
                     </p>
               </div>
@@ -114,13 +114,13 @@
                   <p>Sometimes we can feel things, better than seeing them!</p>
               </div>
               {%endif%}
-            
+
             <div class="btns">
-              <a href="">Try Again</a>
-              <a href="">Learn More</a>
+              <a href="{{url_for('mainMenu')}}">Try Again</a>
+              <a href="{{url_for('info')}}">Learn More</a>
             </div>
-          
-          
+
+
           </div>
 
 
@@ -181,7 +181,7 @@
         var button = document.getElementById('resume')
         button.onclick = function() {
         video.play();
-        box.style.display = 'none';}   
+        box.style.display = 'none';}
         }, 1000);}, 2000);
 
 
@@ -214,7 +214,6 @@ video.onplay = function() {
 
 }
   -->
-      
+
 </script>
 </html>
-
