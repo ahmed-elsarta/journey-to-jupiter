@@ -118,4 +118,3 @@ def scoreboard():
     return render_template('scoreboard.html', data = result)
 if __name__ == '__main__':
     app.run(debug = True)
-
