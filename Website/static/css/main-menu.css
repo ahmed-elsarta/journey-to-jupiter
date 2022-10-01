@@ -406,7 +406,7 @@ form {
     border-radius: 0.25em;
     color: var(--clr-neon);
     padding: 0.1em 0.3em;
-    cursor: pointer;
+    cursor: pointer;=
     text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
     box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
     position: absolute;
@@ -433,22 +433,6 @@ form {
     background: var(--clr-neon);
     color: white;
     text-shadow: none;
-}
-
-.Info-btn::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    box-shadow: rgba(247, 11, 133, 0.514);
-    opacity: 0;
-    transition: opacity 0.2s linear;
-}
-
-.Info-btn:hover::after{
-    opacity: 0.8;
 }
 
 .Info-btn:hover a{
