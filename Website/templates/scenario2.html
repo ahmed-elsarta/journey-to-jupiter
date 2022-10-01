@@ -15,36 +15,36 @@
       {%if scenario == 1%}
       <video id="myVideo" width="320" height="320">
         <source src="../static/img/1 mars sped up.mp4" autoplay muted>
-     </video>
+      </video>
       {% elif scenario == 2%}
       <video id="myVideo" width="320" height="320">
         <source src="../static/img/2 jupiter sped up.mp4" autoplay muted>
-     </video>
+      </video>
       {% elif scenario == 3 %}
       <video id="myVideo" width="320" height="320">
         <source src="../static/img/3 saturn sped up.mp4" autoplay muted>
-     </video>
+      </video>
       {% elif scenario == 4 %}
       <video id="myVideo" width="320" height="320">
         <source src="../static/img/4 uranus sped up.mp4" autoplay muted>
-     </video>
+      </video>
       {% elif scenario == 5 %}
       <video id="myVideo" width="320" height="320">
         <source src="../static/img/5 neptune sped up.mp4" autoplay muted>
-     </video>
+      </video>
       {% elif scenario == 6 %}
       <video id="myVideo" width="320" height="320">
         <source src="../static/img/6 pluto sped up.mp4" autoplay muted>
-     </video>
+      </video>
       {%endif%}
 
-            
-            
 
-	
+
+
+
 
             <div id="box">
-              
+
                 <button id="resume" type="button">Click Me!</button>
             </div>
             <div id="box1">
@@ -66,7 +66,7 @@
                   </p>
               </div>
               {%endif%}
-          
+
               {%if attr2 == 2.4%}
               <div class="hints">
                   <p>for radiation shield</p>
@@ -83,7 +83,7 @@
                   <p>I understand your biased situation for humans but unfortunately we are not a good fit here.</p>
               </div>
               {%endif%}
-          
+
               {%if attr3 == 1.55%}
               <div class="hints">
                   <p>for DNA </p>
@@ -92,7 +92,7 @@
               {%elif attr3 == 1.3%}
               <div class="hints">
                   <p>for DNA</p>
-                  <p>Nice guess but the best decision to make is to try another option to reach the furthest destination! 
+                  <p>Nice guess but the best decision to make is to try another option to reach the furthest destination!
                     A good reward is waiting for you there 😉
                     </p>
               </div>
@@ -102,7 +102,7 @@
                   <p>In Egypt we kill it with our slippers! Do you think it is a good idea?</p>
               </div>
               {%endif%}
-          
+
               {%if attr4 == 1.2%}
               <div class="hints">
                   <p>for eyes</p>
@@ -180,7 +180,7 @@
         var button = document.getElementById('resume')
         button.onclick = function() {
         video.play();
-        box.style.display = 'none';}   
+        box.style.display = 'none';}
         }, 1000);}, 2000);
 
 
@@ -213,7 +213,6 @@ video.onplay = function() {
 
 }
   -->
-      
+
 </script>
 </html>
-
