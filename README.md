@@ -31,17 +31,17 @@ An educational platform (Website) to help people learn about space hazards in a 
 
 ### Screenshots
 
-![Screenshot] (Screenshots/1.png)
-![Screenshot] (Screenshots/2.png)
-![Screenshot] (Screenshots/3.png)
-![Screenshot] (Screenshots/4.png)
-![Screenshot] (Screenshots/5.png)
-![Screenshot] (Screenshots/6.png)
-![Screenshot] (Screenshots/7.png)
+<img src="Screenshots/1.png">
+<img src="Screenshots/2.png">
+<img src="Screenshots/3.png">
+<img src="Screenshots/4.png">
+<img src="Screenshots/5.png">
+<img src="Screenshots/6.png">
+<img src="Screenshots/7.png">
 
 ### Run The project
 
-You need to install Flask and mySQL on your computer to be able to run the project.
+You need to install Node.js and mySQL on your computer to be able to run the project.
 
 
 ## Team
