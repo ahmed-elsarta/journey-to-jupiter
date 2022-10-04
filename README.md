@@ -31,6 +31,9 @@ An educational platform (Website) to help people learn about space hazards in a 
 
 ### Screenshots
 
+![alt text](https://drive.google.com/file/d/1G5sT9jmt0CxKEOt4-h2f4yoHeKC2D4bA/view?usp=sharing)
+
+
 ### Run The project
 
 You need to install Flask and mySQL on your computer to be able to run the project.
