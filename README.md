@@ -31,8 +31,13 @@ An educational platform (Website) to help people learn about space hazards in a 
 
 ### Screenshots
 
-![alt text](https://drive.google.com/file/d/1G5sT9jmt0CxKEOt4-h2f4yoHeKC2D4bA/view?usp=sharing)
-
+![Screenshot] (Screenshots/1.png)
+![Screenshot] (Screenshots/2.png)
+![Screenshot] (Screenshots/3.png)
+![Screenshot] (Screenshots/4.png)
+![Screenshot] (Screenshots/5.png)
+![Screenshot] (Screenshots/6.png)
+![Screenshot] (Screenshots/7.png)
 
 ### Run The project
 
