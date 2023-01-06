@@ -3,11 +3,13 @@
 
 
 ## Table of contents
-- [Overview](#overview)
-  - [Introduction](#introduction)
-  - [Screenshots](#Screenshots)
-  - [Run the Project](#run-the-project)
-- [Team](#team)
+- [Journey to Jupiter](#journey-to-jupiter)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Introduction](#introduction)
+    - [Screenshots](#screenshots)
+    - [Run The project](#run-the-project)
+  - [Team](#team)
 
 
 ## Overview
@@ -37,7 +39,8 @@ An educational platform (Website) to help people learn about space hazards in a 
 <img src="Screenshots/4.png">
 <img src="Screenshots/5.png">
 <img src="Screenshots/6.png">
-<img src="Screenshots/7.png">
+<img src="Screenshots/9.png">
+
 
 ### Run The project
 
